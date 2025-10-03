@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 5 - PHP Form Viewer</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>Travel the World!</h1>
+    <div id="directions">
+        <h3>Directions:</h3>
+        <p>
+            You can travel anywhere you want in the world with only a few clicks!
+            From the choices below, please select your preferred:
+        </p>
+        <ul>
+            <li>Continent</li>
+            <li>Country</li>
+            <li>Actvities</li>
+            <li>How many people you're inviting</li>
+        </ul>
+        <p>
+            In the "Country" section of your selection, please only select countries
+            within your chosen continent and leave the other dropdowns as "empty". Also, if you would
+            like to select multiple European or Australian/Oceanic countries, hold down command
+            on Mac, ctrl on Windows.
+        </p>
+        <p> 
+            After you have selected your destination plan, click "Lets Go!"
+        </p>
+        <h2 id="flySafe">Fly safe!</h2>
+    </div>
+    <br>
+        <div id="form">
+        <form id="travelForm" action="form_viewer.php" method="GET">
+            <fieldset>
+                <legend>Continent</legend> <!--uses radio-->
+                <input type="radio" name="Continent" id="rb1" value="Asia">
+                <label for="rb1">Asia</label>
+                <br>
+                <input type="radio" name="Continent" id="rb2" value="Africa">
+                <label for="rb2">Africa</label>
+                <br>
+                <input type="radio" name="Continent" id="rb3" value="North America">
+                <label for="rb3">North America</label>
+                <br>
+                <input type="radio" name="Continent" id="rb4" value="Europe">
+                <label for="rb4">Europe</label>
+                <br>
+                <input type="radio" name="Continent" id="rb5" value="Australia/Oceania">
+                <label for="rb5">Australia/Oceania</label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Country</legend> <!--uses select-->
+                <label for="s1">Asian Countries</label>
+                <select name="Asian_Countries" id="s1">
+                    <option value="N/A">empty</option>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="China">China</option>
+                    <option value="India">India</option>
+                    <option value="Japan">Japan</option>
+                </select>
+                <br>
+                <label for="s2">African Countries</label>
+                <select name="African_Countries" id="s2">
+                    <option value="N/A">empty</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="Botswana">Botswana</option>
+                    <option value="Cameroon">Cameroon</option>
+                    <option value="Egypt">Egypt</option>
+                </select>
+                <br>
+                <label for="s3">North American Countries</label>
+                <select name="North_American_Countries" id="s3">
+                    <option value="N/A">empty</option>
+                    <option value="Canada">Canada</option>
+                    <option value="United_States">United States</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Costa_Rica">Costa Rica</option>
+                </select>
+                <br>
+                <label for="s4">European Countries</label> <!--uses extras: hold down command to select multiple on Mac, ctrl on Windows-->
+                <select name="European_Countries[]" id="s4" size="4" multiple>
+                    <option value="N/A">empty</option>
+                    <option value="Austria">Austria</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Italy">Italy</option>
+                </select>
+                <br>
+                <label for="s4">Australian/Oceanic Countries</label>
+                <select name="Australian_Countries[]" id="s4" size="4" multiple>
+                    <option value="N/A">empty</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Fiji">Fiji</option>
+                    <option value="Nauru">Nauru</option>
+                    <option value="Papua_New_Guinea">Papua New Guinea</option>
+                </select>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Activities</legend> <!--uses checkbox and number-->
+                <input type="checkbox" name="museum" id="cb1">
+                <label for="cb1">Museums</label>
+                <br>
+                <input type="checkbox" name="picnic" id="cb2">
+                <label for="cb2">Picnic</label>
+                <br>
+                <input type="checkbox" name="hiking" id="cb3">
+                <label for="cb1">Hiking</label>
+                <br>
+                <input type="checkbox" name="camping" id="cb4">
+                <label for="cb4">Camping</label>
+                <br>
+                <input type="checkbox" name="biking" id="cb5">
+                <label for="cb5">Biking</label>
+            </fieldset>
+            <br>
+            <label for="quantity_of_people">How many people are coming with you? Select between 1 and 9:</label>
+            <input type="number" id="quantity" name="quantity_of_people" min="1" max="9"> 
+            <br>
+            <input id="submitButton" type="submit" value="Lets Go!">
+        </form>
+        </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+/* Cmd + Shift + R to reload page if cache is causing loading problems - bypasses cache */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #213638;
+    background-color: floralwhite;
+    padding: 3rem;
+}
+#directions {
+    background-color: #cfe7e5;
+    padding: 2rem;
+
+}
+#form {
+    border: 5px solid, #e5a13e;
+    padding: 2rem;
+}
+h1 {
+    text-align: center;
+}
+#flySafe {
+    text-align: center;
+    color: floralwhite;
+    text-shadow: -2px -2px 0 #213638,
+    2px -2px 0 #213638,
+    -2px 2px 0 #213638,
+    2px 2px 0 #213638;
+    
+}
+#submitButton {
+    background-color: #213638;
+    color: floralwhite;
+    padding: 1rem;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 12px;
+}
